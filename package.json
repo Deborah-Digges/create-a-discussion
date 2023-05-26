@@ -9,9 +9,12 @@
     "actions-toolkit": "^6.0.1",
     "moment": "^2.29.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt"
   },
   "repository": {
     "type": "git",
